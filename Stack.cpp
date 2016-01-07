@@ -21,8 +21,9 @@ void Stack::push(Element *element)
 
 	}else //if the queue is not empty
 	{
-		_first -> _next = element;
+		Element* temp = _first;
 		_first = element;
+		_first -> _next = temp;
 	}
 }
 
