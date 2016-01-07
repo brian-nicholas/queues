@@ -5,28 +5,28 @@
  *      Author: raydelto
  */
 
-#include "Queue.h"
+#include "Stack.h"
 
-Queue::Queue() : _first(NULL),_last(NULL)
+Stack::Stack() : _first(NULL)
 {
 
 
 }
 
-void Queue::enqueue(Element *element)
+void Stack::push(Element *element)
 {
 	if(_first == NULL) // the queue is empty
 	{
 		_first = element;
-		_last = element;
+
 	}else //if the queue is not empty
 	{
-		_last -> _next = element;
-		_last = element;
+		_first -> _next = element;
+		_first = element;
 	}
 }
 
-Element *Queue::dequeue()
+Element *Stack::pop()
 {
 	if(_first == NULL)
 	{
@@ -38,6 +38,6 @@ Element *Queue::dequeue()
 
 }
 
-Queue::~Queue() {
+Stack::~Stack() {
 	// TODO Auto-generated destructor stub
 }

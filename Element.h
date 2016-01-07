@@ -19,7 +19,7 @@ public:
 	Element(std::string name);
 	virtual ~Element();
     std::string getName();
-	friend class Queue;
+	friend class Stack;
 };
 
 #endif /* ELEMENT_H_ */
